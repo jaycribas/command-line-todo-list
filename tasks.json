@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "description": "Buy juice",
+    "complete": false
+  },
+  {
+    "id": 1,
+    "description": "Buy popcorn",
+    "complete": false
+  },
+  {
+    "id": 1,
+    "description": "Make things",
+    "complete": false
+  },
+  {
+    "id": 1,
+    "description": "meow",
+    "complete": false
+  }
+]
