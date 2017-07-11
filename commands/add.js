@@ -3,14 +3,16 @@ const fs = require('fs')
 const todo = process.argv[3]
 const json = require('../tasks.json')
 
-const id = (function(){
-  let counter = 1
-  return function (){
-    return counter++
-  }
-})()
-
 const addTodo = function(){
+
+  let id = (function(){
+    let counter = json.serialId
+    return function (){
+      return counter++
+    }
+  })()
+
+  id()
 
   let newTodo = {
     id: id(),
@@ -18,22 +20,11 @@ const addTodo = function(){
     complete: false
   }
 
-  try {
-    json.push(newTodo)
-  } catch(e){
-    console.log('nope')
-  }
+  json.serialId = newTodo.id
 
-  //
-  // // let data = JSON.stringify(todo, null, 2)
-  // // console.log("data (╯°□°）╯︵ ┻━┻", data)
-  //
+  json["todos"].push(newTodo)
+
   fs.writeFileSync('tasks.json', JSON.stringify(json, null, 2))
-
-  // function finished(err){
-  //   console.log("done (╯°□°）╯︵ ┻━┻")
-  // }
-
 }
 
 module.exports = { addTodo }

@@ -1,22 +1,25 @@
-[
-  {
-    "id": 1,
-    "description": "Buy juice",
-    "complete": false
-  },
-  {
-    "id": 1,
-    "description": "Buy popcorn",
-    "complete": false
-  },
-  {
-    "id": 1,
-    "description": "Make things",
-    "complete": false
-  },
-  {
-    "id": 1,
-    "description": "meow",
-    "complete": false
-  }
-]
+{
+  "serialId": 4,
+  "todos": [
+    {
+      "id": 1,
+      "description": "make a thing",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "description": "make two things",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "description": "make three things",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "description": "make four things",
+      "complete": false
+    }
+  ]
+}
