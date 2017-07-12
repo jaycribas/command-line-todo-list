@@ -25,6 +25,7 @@ const addTodo = function(){
   json["todos"].push(newTodo)
 
   fs.writeFileSync('tasks.json', JSON.stringify(json, null, 2))
+  console.log(`Created task ${newTodo.id}`)
 }
 
 module.exports = { addTodo }
