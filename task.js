@@ -13,6 +13,9 @@ switch (command) {
   case 'done':
     doneTodo()
     break
+  default:
+    console.log('Bad command, try "add (...)", "list" or "done (id)"')
+    break
 }
 
 // add - adds a specific task -- fs.writeFileSync
