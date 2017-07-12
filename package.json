@@ -1,0 +1,22 @@
+{
+  "name": "command-line-todo-list",
+  "version": "1.0.0",
+  "description": "## Skills",
+  "main": "task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaycribas/command-line-todo-list.git"
+  },
+  "author": "Jay Cribas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaycribas/command-line-todo-list/issues"
+  },
+  "homepage": "https://github.com/jaycribas/command-line-todo-list#readme",
+  "dependencies": {
+    "console.table": "^0.8.0"
+  }
+}

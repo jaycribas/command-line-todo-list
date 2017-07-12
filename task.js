@@ -1,5 +1,6 @@
 const command = process.argv[2]
 const { addTodo } = require('./commands/add')
+const { listTodos } = require('./commands/list')
 
 switch (command) {
   case 'add':
