@@ -1,5 +1,7 @@
 const fs = require('fs')
+require('console.table')
 const command = process.argv[2]
+
 const { addTodo } = require('./commands/add')
 const { listTodos } = require('./commands/list')
 const { doneTodo } = require('./commands/done')
@@ -12,7 +14,12 @@ switch (command) {
     break
 
   case 'list':
-    listTodos()
+    const todoList = listTodos()
+    console.table('To Do List', todoList)
+    if(todoList.length == 1 ){
+      return console.log(`${todoList.length} task.`)
+    }
+    return console.log(`${todoList.length} tasks.`)
     break
 
   case 'done':
