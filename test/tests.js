@@ -2,9 +2,13 @@ const expect = require('chai').expect
 
 describe('List to dos', () => {
   const { listTodos } = require('../commands/list')
+  const todoList = listTodos()
 
-  xit('checks for type', () => {
-    expect(expect).to.be.ok
+  it('checks list is an array', () => {
+    expect(todoList).to.be.an('array')
+  })
+  it('checks for "ID" and "Description" keys', () => {
+    expect(...todoList).to.have.all.keys('ID', 'Description')
   })
 })
 
@@ -12,7 +16,7 @@ describe('Add a to do', () => {
   const { addTodo } = require('../commands/add')
   const json = addTodo('Make test pass')
 
-  it('Sends back a JSON object', () => {
+  it('Returns a JSON object', () => {
     expect(json).to.be.an('object')
   })
   it('checks "serialId" is a number', () => {
