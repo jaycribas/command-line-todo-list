@@ -1,30 +1,17 @@
 {
-  "serialId": 5,
+  "serialId": 7,
   "todos": [
     {
-      "id": 1,
-      "description": "make a thing",
-      "complete": false
-    },
-    {
-      "id": 2,
-      "description": "make two things",
-      "complete": false
-    },
-    {
-      "id": 3,
-      "description": "make three things",
-      "complete": false
-    },
-    {
-      "id": 4,
-      "description": "make four things",
-      "complete": false
-    },
-    {
       "id": 5,
-      "description": "make five things",
-      "complete": false
+      "description": "Be yonce"
+    },
+    {
+      "id": 6,
+      "description": "Be you"
+    },
+    {
+      "id": 7,
+      "description": "Go hunting"
     }
   ]
 }
