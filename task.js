@@ -8,9 +8,9 @@ const { doneTodo } = require('./commands/done')
 
 switch (command) {
   case 'add':
-    const todo = process.argv[3]
-    const newJson = addTodo(todo)
-    fs.writeFileSync('tasks.json', JSON.stringify(newJson, null, 2))
+    let todo = process.argv[3]
+    let addedTodoJson = addTodo(todo)
+    fs.writeFileSync('tasks.json', JSON.stringify(addedTodoJson, null, 2))
     break
 
   case 'list':
@@ -23,7 +23,9 @@ switch (command) {
     break
 
   case 'done':
-    doneTodo()
+    let doneId = process.argv[3]
+    let completedTodoJson = doneTodo(doneId)
+    fs.writeFileSync('tasks.json', JSON.stringify(completedTodoJson, null, 2))
     break
 
   default:

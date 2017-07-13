@@ -2,7 +2,7 @@ const expect = require('chai').expect
 
 describe('List to dos', () => {
   const { listTodos } = require('../commands/list')
-  const todoList = listTodos()
+  let todoList = listTodos()
 
   it('checks list is an array', () => {
     expect(todoList).to.be.an('array')
@@ -28,9 +28,16 @@ describe('Add a to do', () => {
 })
 
 describe('Complete a to do', () => {
-  const { done } = require('../commands/done')
+  const { doneTodo } = require('../commands/done')
+  let json = doneTodo(5)
 
-  xit('checks a thing', () => {
-    expect()
+  it('Returns a JSON object', () => {
+    expect(json).to.be.an('object')
+  })
+  it('checks "serialId" is a number', () => {
+    expect(json.serialId).to.be.a('number')
+  })
+  it('checks "todos" is an array', () => {
+    expect(json.todos).to.be.an('array')
   })
 })
