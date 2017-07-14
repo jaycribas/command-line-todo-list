@@ -1,7 +1,7 @@
 const expect = require('chai').expect
-const { listTodos } = require('../commands/list')
-const { addTodo } = require('../commands/add')
-const { doneTodo } = require('../commands/done')
+const list = require('../commands/list')
+const add = require('../commands/add')
+const done = require('../commands/done')
 
 const json = {
   "serialId": 3,
@@ -21,21 +21,21 @@ const json = {
 }
 
 describe('Add a to do', () => {
-  const jsonWithAdd = addTodo(json, 'Make test pass')
+  const addedNewJson = add(json, 'Make test pass')
 
   it('Returns a JSON object', () => {
-    expect(jsonWithAdd).to.be.an('object')
+    expect(addedNewJson).to.be.an('object')
   })
   it('checks "serialId" is a number', () => {
-    expect(jsonWithAdd.serialId).to.be.a('number')
+    expect(addedNewJson.serialId).to.be.a('number')
   })
   it('checks "todos" is an array', () => {
-    expect(jsonWithAdd.todos).to.be.an('array')
+    expect(addedNewJson.todos).to.be.an('array')
   })
 })
 
 describe('List to dos', () => {
-  const todoList = listTodos(json)
+  const todoList = list(json)
 
   it('checks new JSON is an object', () => {
     expect(todoList).to.be.an('array')
@@ -46,15 +46,15 @@ describe('List to dos', () => {
 })
 
 describe('Complete a to do', () => {
-  const jsonWithoutDone = doneTodo(json, 3)
+  const doneNewJson = done(json, 3)
 
   it('Returns a JSON object', () => {
-    expect(jsonWithoutDone).to.be.an('object')
+    expect(doneNewJson).to.be.an('object')
   })
   it('checks "serialId" is a number', () => {
-    expect(jsonWithoutDone.serialId).to.be.a('number')
+    expect(doneNewJson.serialId).to.be.a('number')
   })
   it('checks "todos" is an array', () => {
-    expect(jsonWithoutDone.todos).to.be.an('array')
+    expect(doneNewJson.todos).to.be.an('array')
   })
 })

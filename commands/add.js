@@ -1,4 +1,4 @@
-const addTodo = (json, todo) => {
+module.exports = (json, todo) => {
   json.serialId++
 
   let newTodo = { ID: json.serialId, Description: todo }
@@ -9,5 +9,3 @@ const addTodo = (json, todo) => {
 
   return json
 }
-
-module.exports = { addTodo }

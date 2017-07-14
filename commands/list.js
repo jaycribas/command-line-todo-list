@@ -1,5 +1,1 @@
-const listTodos = json => {
-  return json.todos
-}
-
-module.exports = { listTodos }
+module.exports = json => json.todos
