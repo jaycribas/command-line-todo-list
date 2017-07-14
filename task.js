@@ -5,7 +5,7 @@ const command = process.argv[2]
 const json = JSON.parse(fs.readFileSync('tasks.json'))
 
 const add = require('./commands/add')
-const { listTodos } = require('./commands/list')
+const list = require('./commands/list')
 const done = require('./commands/done')
 
 switch (command) {
