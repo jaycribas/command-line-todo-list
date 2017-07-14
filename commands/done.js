@@ -1,4 +1,4 @@
-const doneTodo = (json, id) => {
+module.exports = (json, id) => {
   for(let val of json.todos){
     if(val.ID == id){
       let indexOfDone = json.todos.indexOf(val)
@@ -8,5 +8,3 @@ const doneTodo = (json, id) => {
   }
   return json
 }
-
-module.exports = { doneTodo }
