@@ -1,16 +1,11 @@
-const json = require('../tasks.json')
-
-const addTodo = function(todo){
+const addTodo = (json, todo) => {
   json.serialId++
 
-  let newTodo = {
-    id: json.serialId,
-    description: todo
-  }
+  let newTodo = { ID: json.serialId, Description: todo }
 
   json.todos.push(newTodo)
 
-  console.log(`Created task ${newTodo.id}`)
+  console.log(`Created task ${newTodo.ID}`)
 
   return json
 }
